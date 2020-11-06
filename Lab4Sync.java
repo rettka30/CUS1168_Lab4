@@ -81,3 +81,12 @@ public class Lab4Sync {
 //Inspiron 7573
 //Processor: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz 1.99GHz
 //System Type: 64-bit operating system, x64-based processor
+
+// Similar to the dining philosophers problem, problems can emerge when simulating this setup. 
+// If multiple savages attempt to eat a portion at the same time, or at least more than this resource 
+// can handle, livelock may occur. With multiple savages attempting to access this resource at the 
+// same time, they will all fail and try again later at the same time. This problem can be solved 
+// using locks on the savages so that the resource. One problem that may emerge is starvation, as 
+// there may be a savage who will be unable to acquire a portion continually. Of course, this problem 
+// may only occur precautions are not taken to remedy this particular problem. One solution is to add 
+// Conditions to the locks or by adding priority to the threads, so that all processes can eventually acquire the resource.
