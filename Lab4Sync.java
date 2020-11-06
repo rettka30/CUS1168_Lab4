@@ -1,42 +1,23 @@
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
-
-// import java.util.concurrent.locks.Lock;
-// import java.util.concurrent.locks.ReentrantLock;
   
 class SynchronizedCounter {
 
-//    private int counter;
-//    private Lock sizeLock;
-   
-//    public Counter() {
-//        counter = 0;  
-//        sizeLock = new ReentrantLock(); 
-//    }
-
    int counter = 0;
    
-   public void increment() { // throws InterruptedException {
-//       sizeLock.lock();
-//       try {
+   public void increment() { 
+   
          synchronized(this){
             counter++;
          }
-//       } finally {
-//          sizeLock.unlock();
-//       }
    }
    
-   public void decrement() { // throws InterruptedException {
-      // sizeLock.lock();
-//       try {
+   public void decrement() { 
+
       synchronized(this){
          counter--;
       }
-//       } finally {
-//          sizeLock.unlock();
-//       }
    }
    
    public int getCount() {
